@@ -14,6 +14,7 @@ class App extends React.Component {
         this.setState({password : data})
        console.log("data ---" + data)
        setTimeout(console.log("this.state.password ---" + this.state.password),1)
+       // czemu mi się wyświetla jedno klikniecie pozniej stan mimo time outa
     }
 
 render () {
