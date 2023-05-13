@@ -1,22 +1,29 @@
 import './App.css';
 import A from './A'
-import React, {useState} from "react";
+import React from "react";
 
 
-function App() {
-    const [data, setData] = useState("")
-
-    const pass = (a) => {
-        setData(a);
-        console.log("data" + data)
-        console.log("a->>>" + a)
+class App extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            password : ""
+        }
+    }
+   pass = (data) => {
+        this.setState({password : data})
+       console.log("data ---" + data)
+       setTimeout(console.log("this.state.password ---" + this.state.password),1)
     }
 
+render () {
     return (
-    <div>
-        <A pass = {pass}/>
-    </div>
-  )
+        <div>
+            <A pass={this.pass}/>
+        </div>
+    )
+
+}
 }
 
 export default App;
