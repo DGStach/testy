@@ -5,17 +5,13 @@ import React from "react";
 
 class App extends React.Component {
     constructor() {
-        super();
+        super({});
+        this.t = 'abc'
         this.state = {
-            password : ""
+            password : "",
+            lol:"ABC"
         }
     }
- /*  pass = (data) => {
-        this.setState({password : data})
-       console.log("data ---" + data)
-       setTimeout(console.log("this.state.password ---" + this.state.password),1)
-    }*/
-
     pass = (data) => {
         console.log("input Val --->" + data)
     }
@@ -23,7 +19,8 @@ class App extends React.Component {
 render () {
     return (
         <div>
-            <A pass={this.props.pass}/>
+            pppp
+            <A t={this.t} lol={this.state.lol}/>
         </div>
     )
 

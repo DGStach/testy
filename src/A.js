@@ -1,25 +1,22 @@
 import React from "react";
 
 class firstComponent extends React.Component{
-    constructor (prop) {
-        super (prop);
+    constructor ({lol,t}) {
+        super ({});
+        this.k = t;
         this.state = {
-            passType : "text"
+            passType : "text",
+            lolA:lol
         }
     }
 
-// czy pomiedzy klasami da się przekazywac funkcje bez tworzenia komponentu matki
-
 render (){
-        const {passType} = this.state
+    console.log('this.k', this.k)
+    console.log("ABC expected->>>")
     return (
         <div>
-            <form>
-                <label>Password</label>
-                <input
-                    type = {passType}
-                    onChange={(event)=>pass(event.target.value)}/>
-            </form>
+            <h1>{this.k}</h1>
+            <h2>{this.props.lol}</h2>
         </div>
     )
 }
