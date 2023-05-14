@@ -11,8 +11,6 @@ class firstComponent extends React.Component{
     }
 
 render (){
-    console.log('this.k', this.k)
-    console.log("ABC expected->>>")
     return (
         <div>
             <h1>{this.k}</h1>
